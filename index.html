@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borges Calculates</title>
+  <link rel="icon" href="">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="screen scr-1">
+        <h1>Calculator 1</h1>
+        <div class="content con-1">
+            <div class="floating-symbols" id="floatingSymbols"></div>
+            <div class="calc first-calc">
+                <div class="row top-row">    
+                    <input type="0">
+                </div>
+                <div class="row">    
+                    <button>AC</button>
+                    <button>7</button>
+                    <button>7</button>
+                    <button>EM</button>
+                    <button class="btn btn-clear">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </button>
+                </div>
+                <div class="row">    
+                    <button>AC</button>
+                    <button>7</button>
+                    <button>8</button>         
+                    <button>7</button>
+                    <button class="btn btn-operator" onclick="appendToDisplay('/')">/</button>
+                </div>
+                <div class="row">    
+                    <button>R</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button class="btn btn-operator" onclick="appendToDisplay('-')">-</button>
+                </div>
+                <div class="row">    
+                    <button>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="21" r="2" fill="currentColor"/>
+                          </svg>
+                    </button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button class="btn btn-operator" onclick="appendToDisplay('+')">+</button>
+                </div>
+                <div class="row">    
+                    <button class="btn" onclick="appendToDisplay('0')">0</button>
+                    <button class="btn" onclick="appendToDisplay('1')">1</button>
+                    <button class="btn" onclick="appendToDisplay('2')">2</button>
+                    <button class="btn" onclick="appendToDisplay('3')">3</button>
+                    <button class="btn btn-equals" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="screen scr-2">
+        <h1>Calculator 2</h1>
+        <div class="content con-2">
+
+        </div>
+    </div>
+    <div class="screen scr-3">
+        <h1>Calculator 3</h1>
+        <div class="content con-3">
+
+        </div>
+    </div>
+    <div class="screen scr-4">
+        <h1>Calculator 4</h1>
+        <div class="content con-4">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

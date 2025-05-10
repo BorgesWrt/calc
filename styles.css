@@ -1,0 +1,147 @@
+/* Root */
+
+:root {
+    --neon-blue: #00f2ff;
+    --neon-purple: #bd00ff;
+    --dark-bg: #0a0a15;
+
+    --white: #eee;
+    --black: #222;
+    --purple: #a503c1;
+    --red: #c11603;
+    --blue: #033cc1;
+    --green: #008729;
+    --rose: #f3bbee;
+}
+
+html {
+    scroll-snap-type: y mandatory; /* вертикальная прокрутка с обязательным прилипанием */
+    scroll-behavior: smooth; /* добавляем плавность */
+    overflow-y: scroll; /* всегда показываем скроллбар для предсказуемости */
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Screens */
+
+.screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start; /* прилипание к началу секции */
+}
+
+/* Background */
+
+.floating-symbols {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.symbol {
+    position: absolute;
+    opacity: 0.1;
+    color: var(--rose);
+    font-size: 5vh;
+    animation: float 8s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-100vh) rotate(800deg); }
+}
+
+
+/* Headers */
+
+body h1 {
+    font-size: 52px;
+    height: 15%;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.scr-1 > h1 {
+    text-shadow: 3px 3px var(--purple);
+}
+
+.scr-2 > h1 {
+    text-shadow: 2px 2px #c11603;
+}
+
+.scr-3 > h1 {
+    text-shadow: 2px 2px #033cc1;
+}
+
+.scr-4 > h1 {
+    text-shadow: 2px 2px #008729;
+}
+
+/* Content divs */
+
+.content {
+    height: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Calcs */
+
+.calc {
+    border-top: solid 4px var(--white);
+    border-left: solid 4px var(--white);
+    border-right: solid 4px var(--purple);
+    border-bottom: solid 4px var(--purple);
+    border-radius: 15px;
+    height: 80%;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Rows */
+
+.row {
+    width: 95%;
+    height: 20%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.top-row {
+    margin-top: 5vh
+}
+
+.row > input {
+    height: 8vh;
+    width: 92%;
+    font-size: 5vh;
+    text-align: end;
+    border-top: solid 4px var(--white);
+    border-left: solid 4px var(--white);
+    border-right: solid 4px var(--purple);
+    border-bottom: solid 4px var(--purple);
+    background-color: #222;
+    color: var(--white);
+    border-radius: 5px;
+}
+
+.row > button {
+    height: 7vh;
+    width: 7vh;
+    border-radius: 50%;
+    font-size: 26px;
+}
+
